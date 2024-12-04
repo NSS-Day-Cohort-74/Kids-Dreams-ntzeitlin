@@ -1,5 +1,17 @@
 import { getCelebrities } from "./database.js"
 
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const clickTarget = clickEvent.target
+        if (clickTarget.dataset.type === "celebrity") {
+            window.alert(`${clickTarget.innerText}'s sport is ${clickTarget.dataset.sport} `)
+        }
+    }
+)
+
+
+
 const celebrities = getCelebrities()
 
 export const Celebrities = () => {
