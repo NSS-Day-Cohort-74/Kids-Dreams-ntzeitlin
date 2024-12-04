@@ -1,5 +1,16 @@
 import { getChildren } from "./database.js"
 
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const clickTarget = clickEvent.target
+        if (clickTarget.dataset.type === "child") {
+            window.alert(`${clickTarget.innerText}'s wish is to ${clickTarget.dataset.wish}`)
+        }
+    }
+)
+
+
 const children = getChildren()
 
 export const Kids = () => {
